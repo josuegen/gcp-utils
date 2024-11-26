@@ -1,3 +1,12 @@
+"""
+Cloud Asset Inventory Export
+
+Cloud Function to export the Clouid Asset Inventory to BigQuery
+https://cloud.google.com/asset-inventory/docs/export-bigquery
+
+Author: josuegen@google.com
+"""
+
 import functions_framework
 
 @functions_framework.http
