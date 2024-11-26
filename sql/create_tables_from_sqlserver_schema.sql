@@ -2,6 +2,8 @@
 Dinamycally crates BigQuery tables from a extract of Information Schema from SQL Server
 https://learn.microsoft.com/en-us/sql/relational-databases/system-information-schema-views/columns-transact-sql?view=sql-server-ver16
 
+The script needs the extraction of the data to be loaded into a BigQuery table named as SCHEMAS
+
 Author: Josue Velazquez (josuegen@google.com)
 ***************************************************************************************************************************************/
 
@@ -28,7 +30,7 @@ FOR record IN
         CASE WHEN IS_NULLABLE THEN '' ELSE 'NOT NULL' END
       ) cols
     FROM (
-      SELECT * FROM bq-poc-pso.sap_staging.SCHEMAS
+      SELECT * FROM <project>.<dataset>.SCHEMAS --TODO: Developer to adjust project and dataset 
       ORDER BY TABLE_NAME,ORDINAL_POSITION
     )
     GROUP BY 1,2
