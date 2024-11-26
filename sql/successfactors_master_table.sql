@@ -4,6 +4,8 @@ using nested and repeated fields. Used the documentation below to build the stru
 
 https://help.sap.com/docs/SAP_SUCCESSFACTORS_PLATFORM/d599f15995d348a1b45ba5603e2aba9b/e1209c55c4034e3cb6178dcea3faa361.html
 
+TODO: Developer to adjust project and dataset of each table
+
 Author: Josue Velazquez (josuegen@google.com)
 ********************************************************************************************************************************/
 
