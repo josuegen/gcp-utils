@@ -1,3 +1,11 @@
+/*******************************************************************************
+Extracts the top used columns as predicates for the tables in a GCP project
+using the information from BigQuery Information Schema
+
+Author: Josue Velazquez (josuegen@google.com)
+********************************************************************************/
+
+
 CREATE TEMP FUNCTION mapColumns(where_clause STRING, column_list ARRAY<STRING>)
 RETURNS STRING
 LANGUAGE js AS r"""
