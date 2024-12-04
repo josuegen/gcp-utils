@@ -42,7 +42,8 @@ def run_process(row_range: List[int]):
     data-validation validate column \
     -tc bq-dev \
     -sc bq-dev \
-    -tbls '{source_project}.{source_dataset}.{table}=i-dss-dw-poc.dw_drop.{table}' \
+    # TODO: Update target project and target dataset of the target table
+    -tbls '{source_project}.{source_dataset}.{table}=<target-project>.<target-dataset>.{table}' \
     --filters 'date({date_column})='"'"'{validation_date}'"'"'' \
     -bqrh <project>.<dataset>.<table> --TODO: UPDATE FQDN result table ID
     """
